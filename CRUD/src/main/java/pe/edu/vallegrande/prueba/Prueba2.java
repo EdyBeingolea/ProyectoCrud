@@ -10,20 +10,15 @@ public class Prueba2 {
 	public static void main(String[] args) {
 
 		try {
-			ClienteModel model = new ClienteModel();
-			model.setName(null);
-			
-			
 			ClienteService service = new ClienteService();
-			List<ClienteModel> lista = service.get(model);
+			List<ClienteModel> lista = service.getAll();
 			
-			System.out.println("listado");
-			System.out.println("Registro" + lista.size());
+			System.out.println("Filas: " + lista.size());
 			for (ClienteModel rec : lista) {
 				System.out.println(rec.getId() + " - " + rec.getName());
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.err.println(e.getMessage());
 		}
 	}
 
