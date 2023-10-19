@@ -23,7 +23,7 @@ CREATE TABLE Customer (
     name varchar(60),
     address varchar(90),
     phone char(9),
-    dateOfBirth date,
+    status char(1) default 'A',
     CONSTRAINT Customer_pk PRIMARY KEY  (id)
 );
 
@@ -191,23 +191,23 @@ VALUES ('Área de Pelado', 'Esta área se encarga de pelar las plátanos para la pr
 go
 
 -- Insertar datos ficticios para 15 clientes en Perú
-INSERT INTO Customer (name, address, phone, dateOfBirth)
+INSERT INTO Customer (name, address, phone)
 VALUES
-    ('Juan Pérez', 'Lima, Perú', '912345678', '1985-05-10'),
-    ('María González', 'Arequipa, Perú', '945678912', '1990-03-15'),
-    ('Carlos Rodríguez', 'Trujillo, Perú', '976543210', '1982-08-22'),
-    ('Sofía Martínez', 'Cusco, Perú', '913210987', '1995-12-05'),
-    ('Luis García', 'Piura, Perú', '954678123', '1988-07-18'),
-    ('Ana López', 'Chiclayo, Perú', '968712345', '1993-04-30'),
-    ('Pedro Fernández', 'Iquitos, Perú', '937891234', '1987-01-25'),
-    ('Elena Ramírez', 'Tacna, Perú', '911234567', '1992-06-12'),
-    ('Miguel Torres', 'Pucallpa, Perú', '926789012', '1980-09-03'),
-    ('Laura Silva', 'Huancayo, Perú', '927890123', '1998-11-28'),
-    ('José Mendoza', 'Chimbote, Perú', '918765432', '1984-02-17'),
-    ('Carmen Herrera', 'Ica, Perú', '979012345', '1991-07-07'),
-    ('Jorge Vargas', 'Huaraz, Perú', '953210987', '1989-10-20'),
-    ('Rosa Flores', 'Tarapoto, Perú', '958765432', '1994-09-14'),
-    ('Diego Castro', 'Ayacucho, Perú', '994567890', '1983-12-31')
+    ('Juan Pérez', 'Lima, Perú', '912345678'),
+    ('María González', 'Arequipa, Perú', '945678912'),
+    ('Carlos Rodríguez', 'Trujillo, Perú', '976543210'),
+    ('Sofía Martínez', 'Cusco, Perú', '913210987'),
+    ('Luis García', 'Piura, Perú', '954678123'),
+    ('Ana López', 'Chiclayo, Perú', '968712345'),
+    ('Pedro Fernández', 'Iquitos, Perú', '937891234'),
+    ('Elena Ramírez', 'Tacna, Perú', '911234567'),
+    ('Miguel Torres', 'Pucallpa, Perú', '926789012'),
+    ('Laura Silva', 'Huancayo, Perú', '927890123'),
+    ('José Mendoza', 'Chimbote, Perú', '918765432'),
+    ('Carmen Herrera', 'Ica, Perú', '979012345'),
+    ('Jorge Vargas', 'Huaraz, Perú', '953210987'),
+    ('Rosa Flores', 'Tarapoto, Perú', '958765432'),
+    ('Diego Castro', 'Ayacucho, Perú', '994567890')
 go
 
 
