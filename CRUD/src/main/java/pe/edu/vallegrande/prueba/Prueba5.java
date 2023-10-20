@@ -6,11 +6,11 @@ public class Prueba5 {
 
 	public static void main(String[] args) {
 		try {
-			Integer id = 7;
+			Integer id = 18;
 			
 			ClienteService service = new ClienteService();
 			service.delete(id);
-			System.out.println("Registro eliminado");
+			System.out.println("Registro eliminado Logicamente");
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 		}

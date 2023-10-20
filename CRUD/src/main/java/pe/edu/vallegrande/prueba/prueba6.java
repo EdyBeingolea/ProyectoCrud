@@ -9,9 +9,9 @@ public class prueba6 {
 		try {
 
 			ClienteModel model = new ClienteModel();
-			model.setId(17);
-			model.setName("pppppp");
-			model.setAddress("adsawd");
+			model.setId(15);
+			model.setName("Benito Peres Criss");
+			model.setAddress("Calle 13");
 			model.setPhone("928502303");
 
 			// Crear un objeto de servicio de cliente

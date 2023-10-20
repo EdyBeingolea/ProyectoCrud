@@ -187,6 +187,11 @@ public class ClienteService implements CrudServiceSpecs<ClienteModel> {
 			pstm.setInt(4,bean.getId());
 			pstm.executeUpdate();
 
+			sql = "SELECT @@IDENTITY id";
+			pstm = cn.prepareStatement(sql);
+			rs = pstm.executeQuery();
+			rs.next();
+			cn.commit();
 		} catch (Exception e) {
 			try {
 				cn.rollback();
@@ -215,7 +220,7 @@ public class ClienteService implements CrudServiceSpecs<ClienteModel> {
 			cn = AccesoDB.getConnection();
 			cn.setAutoCommit(false);
 
-			sql = "UPDATE customer SET status='I' WHERE status=?";
+			sql = "UPDATE customer SET status='I' WHERE id=?";
 			pstm = cn.prepareStatement(sql);
 			pstm.setInt(1, id);
 			filas = pstm.executeUpdate();
