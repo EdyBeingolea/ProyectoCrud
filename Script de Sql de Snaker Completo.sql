@@ -30,7 +30,7 @@ CREATE TABLE Customer (
 CREATE TABLE Employee (
     id int identity(1,1),
     name varchar(50) NOT NULL CHECK (name LIKE '%[a-zA-Z ]'),
-    lastName varchar(80) NOT NULL CHECK (name LIKE '%[a-zA-Z ]'),
+    lastName varchar(80) NOT NULL CHECK (lastName LIKE '%[a-zA-Z ]'),
     dni char(8) NOT NULL,
     status char(1) DEFAULT 'A' CHECK (status IN ('A', 'I')),
     CONSTRAINT Employee_pk PRIMARY KEY (id)
@@ -178,55 +178,55 @@ ALTER TABLE Sale ADD CONSTRAINT Sale_Employee
 
 
 -- Insert data into the Areas table
--- Datos de Areas para la producciÛn de chifle
+-- Datos de Areas para la producci√≥n de chifle
 
 INSERT INTO Areas (name, description)
-VALUES ('¡rea de Pelado', 'Esta ·rea se encarga de pelar las pl·tanos para la producciÛn de chifle.'),
-       ('¡rea de Corte', 'AquÌ se cortan los pl·tanos en rodajas finas para freÌr.'),
-       ('¡rea de Fritura', 'Las rodajas de pl·tano se frÌen en esta ·rea hasta que estÈn crujientes.'),
-       ('¡rea de SazÛn', 'Se agregan condimentos y sal a las rodajas de pl·tano fritas.'),
-       ('¡rea de Empaque', 'Las porciones de chifle se empacan y etiquetan para su distribuciÛn.'),
-       ('¡rea de Almacenamiento', 'AlmacÈn de materias primas y productos terminados para la producciÛn de chifle.'),
-       ('¡rea de Calidad', 'Esta ·rea se encarga de controlar la calidad de los chifles antes de su distribuciÛn.');
+VALUES ('√Årea de Pelado', 'Esta √°rea se encarga de pelar las pl√°tanos para la producci√≥n de chifle.'),
+       ('√Årea de Corte', 'Aqu√≠ se cortan los pl√°tanos en rodajas finas para fre√≠r.'),
+       ('√Årea de Fritura', 'Las rodajas de pl√°tano se fr√≠en en esta √°rea hasta que est√©n crujientes.'),
+       ('√Årea de Saz√≥n', 'Se agregan condimentos y sal a las rodajas de pl√°tano fritas.'),
+       ('√Årea de Empaque', 'Las porciones de chifle se empacan y etiquetan para su distribuci√≥n.'),
+       ('√Årea de Almacenamiento', 'Almac√©n de materias primas y productos terminados para la producci√≥n de chifle.'),
+       ('√Årea de Calidad', 'Esta √°rea se encarga de controlar la calidad de los chifles antes de su distribuci√≥n.');
 go
 
--- Insertar datos ficticios para 15 clientes en Per˙
+-- Insertar datos ficticios para 15 clientes en Per√∫
 INSERT INTO Customer (name, address, phone)
 VALUES
-    ('Juan PÈrez', 'Lima, Per˙', '912345678'),
-    ('MarÌa Gonz·lez', 'Arequipa, Per˙', '945678912'),
-    ('Carlos RodrÌguez', 'Trujillo, Per˙', '976543210'),
-    ('SofÌa MartÌnez', 'Cusco, Per˙', '913210987'),
-    ('Luis GarcÌa', 'Piura, Per˙', '954678123'),
-    ('Ana LÛpez', 'Chiclayo, Per˙', '968712345'),
-    ('Pedro Fern·ndez', 'Iquitos, Per˙', '937891234'),
-    ('Elena RamÌrez', 'Tacna, Per˙', '911234567'),
-    ('Miguel Torres', 'Pucallpa, Per˙', '926789012'),
-    ('Laura Silva', 'Huancayo, Per˙', '927890123'),
-    ('JosÈ Mendoza', 'Chimbote, Per˙', '918765432'),
-    ('Carmen Herrera', 'Ica, Per˙', '979012345'),
-    ('Jorge Vargas', 'Huaraz, Per˙', '953210987'),
-    ('Rosa Flores', 'Tarapoto, Per˙', '958765432'),
-    ('Diego Castro', 'Ayacucho, Per˙', '994567890')
+    ('Juan P√©rez', 'Lima, Per√∫', '912345678'),
+    ('Mar√≠a Gonz√°lez', 'Arequipa, Per√∫', '945678912'),
+    ('Carlos Rodr√≠guez', 'Trujillo, Per√∫', '976543210'),
+    ('Sof√≠a Mart√≠nez', 'Cusco, Per√∫', '913210987'),
+    ('Luis Garc√≠a', 'Piura, Per√∫', '954678123'),
+    ('Ana L√≥pez', 'Chiclayo, Per√∫', '968712345'),
+    ('Pedro Fern√°ndez', 'Iquitos, Per√∫', '937891234'),
+    ('Elena Ram√≠rez', 'Tacna, Per√∫', '911234567'),
+    ('Miguel Torres', 'Pucallpa, Per√∫', '926789012'),
+    ('Laura Silva', 'Huancayo, Per√∫', '927890123'),
+    ('Jos√© Mendoza', 'Chimbote, Per√∫', '918765432'),
+    ('Carmen Herrera', 'Ica, Per√∫', '979012345'),
+    ('Jorge Vargas', 'Huaraz, Per√∫', '953210987'),
+    ('Rosa Flores', 'Tarapoto, Per√∫', '958765432'),
+    ('Diego Castro', 'Ayacucho, Per√∫', '994567890')
 go
 
 
 -- Insertar datos ficticios para 15 empleados
 INSERT INTO Employee (name, lastName, dni)
 VALUES
-    ('Luis', 'GÛmez', '12345678'),
-    ('Ana', 'MartÌnez', '23456789'),
-    ('Carlos', 'RodrÌguez', '34567890'),
-    ('MarÌa', 'PÈrez', '45678901'),
-    ('Pedro', 'Gonz·lez', '56789012'),
-    ('SofÌa', 'LÛpez', '67890123'),
-    ('Javier', 'S·nchez', '78901234'),
-    ('Laura', 'Hern·ndez', '89012345'),
+    ('Luis', 'G√≥mez', '12345678'),
+    ('Ana', 'Mart√≠nez', '23456789'),
+    ('Carlos', 'Rodr√≠guez', '34567890'),
+    ('Mar√≠a', 'P√©rez', '45678901'),
+    ('Pedro', 'Gonz√°lez', '56789012'),
+    ('Sof√≠a', 'L√≥pez', '67890123'),
+    ('Javier', 'S√°nchez', '78901234'),
+    ('Laura', 'Hern√°ndez', '89012345'),
     ('Diego', 'Torres', '90123456'),
-    ('Carmen', 'DÌaz', '01234567'),
-    ('Jorge', 'Fern·ndez', '13579246'),
+    ('Carmen', 'D√≠az', '01234567'),
+    ('Jorge', 'Fern√°ndez', '13579246'),
     ('Elena', 'Ortega', '24681357'),
-    ('AndrÈs', 'Vargas', '35792468'),
+    ('Andr√©s', 'Vargas', '35792468'),
     ('Isabel', 'Mendoza', '46813579'),
     ('Fernando', 'Soto', '57924680')
 go
@@ -234,20 +234,20 @@ go
 -- Insertar datos ficticios para 15 empleados sin el campo "state"
 INSERT INTO Employee (name, lastName, dni)
 VALUES
-    ('Juan', 'PÈrez GÛmez', '12345678'),
-    ('MarÌa', 'Gonz·lez LÛpez', '23456789'),
-    ('Carlos', 'RodrÌguez MartÌnez', '34567890'),
-    ('SofÌa', 'MartÌnez GarcÌa', '45678901'),
-    ('Luis', 'GarcÌa RodrÌguez', '56789012'),
-    ('Ana', 'LÛpez PÈrez', '67890123'),
-    ('Pedro', 'Fern·ndez S·nchez', '78901234'),
-    ('Elena', 'RamÌrez Torres', '89012345'),
-    ('Miguel', 'Torres Gonz·lez', '90123456'),
-    ('Laura', 'Silva MartÌnez', '01234567'),
-    ('JosÈ', 'Mendoza LÛpez', '11223344'),
-    ('Carmen', 'Herrera RodrÌguez', '22334455'),
-    ('Jorge', 'Vargas PÈrez', '33445566'),
-    ('Rosa', 'Flores S·nchez', '44556677'),
+    ('Juan', 'P√©rez G√≥mez', '12345678'),
+    ('Mar√≠a', 'Gonz√°lez L√≥pez', '23456789'),
+    ('Carlos', 'Rodr√≠guez Mart√≠nez', '34567890'),
+    ('Sof√≠a', 'Mart√≠nez Garc√≠a', '45678901'),
+    ('Luis', 'Garc√≠a Rodr√≠guez', '56789012'),
+    ('Ana', 'L√≥pez P√©rez', '67890123'),
+    ('Pedro', 'Fern√°ndez S√°nchez', '78901234'),
+    ('Elena', 'Ram√≠rez Torres', '89012345'),
+    ('Miguel', 'Torres Gonz√°lez', '90123456'),
+    ('Laura', 'Silva Mart√≠nez', '01234567'),
+    ('Jos√©', 'Mendoza L√≥pez', '11223344'),
+    ('Carmen', 'Herrera Rodr√≠guez', '22334455'),
+    ('Jorge', 'Vargas P√©rez', '33445566'),
+    ('Rosa', 'Flores S√°nchez', '44556677'),
     ('Diego', 'Castro Torres', '55667788')
 go
 
@@ -257,30 +257,30 @@ VALUES
     ('Chifles de Platano', 'Aperitivo de platano frito', 3.99, 100),
     ('Chifles de Papas', 'Aperitivo de papas fritas', 2.49, 150),
     ('Chifles de Yuca', 'Aperitivo de yuca frita', 3.49, 120),
-    ('Chifles de Pl·tano Maduro', 'Aperitivo de pl·tano maduro frito', 3.79, 95),
+    ('Chifles de Pl√°tano Maduro', 'Aperitivo de pl√°tano maduro frito', 3.79, 95),
     ('Papas de Camote', 'Papas de camote crujientes', 2.99, 130),
     ('Chifles Mixtos', 'Mezcla de chifles de platano y yuca', 3.99, 85)
 go
 
 
--- Insertar datos ficticios para 15 proveedores en Piura, Per˙
+-- Insertar datos ficticios para 15 proveedores en Piura, Per√∫
 INSERT INTO Supplier (name, address, phone)
 VALUES
-    ('JosÈ GarcÌa PÈrez', 'Piura, Av. Principal 123', '912345678'),
-    ('MarÌa RodrÌguez S·nchez', 'Piura, Calle Central 456', '945678912'),
-    ('Juan MartÌnez LÛpez', 'Sullana, Jr. Libertad 789', '976543210'),
-    ('Ana PÈrez Gonz·lez', 'Piura, Av. Comercial 234', '913210987'),
-    ('Pedro LÛpez Torres', 'Talara, Calle Playa 567', '954678123'),
-    ('Carmen Gonz·lez Vargas', 'Piura, Calle Mercado 890', '968712345'),
-    ('Luis PÈrez GarcÌa', 'Piura, Av. Principal 1234', '937891234'),
-    ('Elena S·nchez MartÌnez', 'Chulucanas, Jr. C·ceres 123', '911234567'),
-    ('Miguel MartÌnez Gonz·lez', 'Piura, Calle Industrial 5678', '926789012'),
-    ('SofÌa GarcÌa RodrÌguez', 'Piura, Av. Norte 345', '927890123'),
-    ('Carlos PÈrez Torres', 'Piura, Calle Mariscal 901', '918765432'),
-    ('Rosa S·nchez GarcÌa', 'Piura, Jr. Lima 2345', '979012345'),
-    ('Diego Torres LÛpez', 'Piura, Av. Sur 678', '953210987'),
-    ('Laura Vargas PÈrez', 'Piura, Calle Este 12345', '958765432'),
-    ('Jorge PÈrez S·nchez', 'Castilla, Av. Oeste 6789', '994567890')
+    ('Jos√© Garc√≠a P√©rez', 'Piura, Av. Principal 123', '912345678'),
+    ('Mar√≠a Rodr√≠guez S√°nchez', 'Piura, Calle Central 456', '945678912'),
+    ('Juan Mart√≠nez L√≥pez', 'Sullana, Jr. Libertad 789', '976543210'),
+    ('Ana P√©rez Gonz√°lez', 'Piura, Av. Comercial 234', '913210987'),
+    ('Pedro L√≥pez Torres', 'Talara, Calle Playa 567', '954678123'),
+    ('Carmen Gonz√°lez Vargas', 'Piura, Calle Mercado 890', '968712345'),
+    ('Luis P√©rez Garc√≠a', 'Piura, Av. Principal 1234', '937891234'),
+    ('Elena S√°nchez Mart√≠nez', 'Chulucanas, Jr. C√°ceres 123', '911234567'),
+    ('Miguel Mart√≠nez Gonz√°lez', 'Piura, Calle Industrial 5678', '926789012'),
+    ('Sof√≠a Garc√≠a Rodr√≠guez', 'Piura, Av. Norte 345', '927890123'),
+    ('Carlos P√©rez Torres', 'Piura, Calle Mariscal 901', '918765432'),
+    ('Rosa S√°nchez Garc√≠a', 'Piura, Jr. Lima 2345', '979012345'),
+    ('Diego Torres L√≥pez', 'Piura, Av. Sur 678', '953210987'),
+    ('Laura Vargas P√©rez', 'Piura, Calle Este 12345', '958765432'),
+    ('Jorge P√©rez S√°nchez', 'Castilla, Av. Oeste 6789', '994567890')
 go
 
 -- Insertar datos ficticios para 15 compras en la tabla Purchase
@@ -303,7 +303,7 @@ VALUES
     (15)
 go
 
--- Datos de materias primas relacionadas con camote, pl·tano, yuca y papas
+-- Datos de materias primas relacionadas con camote, pl√°tano, yuca y papas
 
 -- Camote
 INSERT INTO RawMaterial (name, price)
@@ -311,10 +311,10 @@ VALUES ('Camote naranja', 2.50),
        ('Camote morado', 2.75),
        ('Camote amarillo', 2.60);
 
--- Pl·tano
+-- Pl√°tano
 INSERT INTO RawMaterial (name, price)
-VALUES ('Pl·tano verde', 1.80),
-       ('Pl·tano maduro', 2.00);
+VALUES ('Pl√°tano verde', 1.80),
+       ('Pl√°tano maduro', 2.00);
 
 -- Yuca
 INSERT INTO RawMaterial (name, price)
@@ -335,7 +335,7 @@ VALUES (100, 1, 1, 2.50),
        (75, 2, 1, 2.50), 
        (120, 3, 1, 2.50); 
 
--- Compra de Pl·tano
+-- Compra de Pl√°tano
 INSERT INTO PurchaseDetail (quantity, Purchase_id, RawMaterial_id, unit_price)
 VALUES (200, 4, 4, 1.80),
        (150, 5, 4, 1.80); 
@@ -355,7 +355,7 @@ go
 
 
 
--- Datos de RawMaterialHistory relacionados con la producciÛn de chifle
+-- Datos de RawMaterialHistory relacionados con la producci√≥n de chifle
 
 -- Historia de materias primas para el chifle
 INSERT INTO RawMaterialHistory (Employee_id, Areas_id, Purchase_id, RawMaterial_id)
