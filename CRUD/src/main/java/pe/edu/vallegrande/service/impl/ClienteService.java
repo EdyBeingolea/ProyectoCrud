@@ -169,8 +169,38 @@ public class ClienteService implements CrudServiceSpecs<ClienteModel> {
 
 	@Override
 	public ClienteModel update(ClienteModel bean) {
-		// TODO Auto-generated method stub
-		return null;
+		Integer id;
+		Connection cn = null;
+		PreparedStatement pstm;
+		ResultSet rs;
+		String sql;
+
+		try {
+			cn = AccesoDB.getConnection();
+			cn.setAutoCommit(false);
+
+			sql = "UPDATE CUSTOMER SET name = ?,address = ?,phone = ? WHERE id = ?";
+			pstm = cn.prepareStatement(sql);
+			pstm.setString(1, bean.getName());
+			pstm.setString(2, bean.getAddress());
+			pstm.setString(3, bean.getPhone());
+			pstm.setInt(4,bean.getId());
+			pstm.executeUpdate();
+
+		} catch (Exception e) {
+			try {
+				cn.rollback();
+			} catch (Exception e2) {
+			}
+			throw new RuntimeException("Error en el proceso");
+		} finally {
+			try {
+				cn.close();
+			} catch (Exception e) {
+			}
+		}
+		//
+		return bean;
 	}
 
 	@Override
