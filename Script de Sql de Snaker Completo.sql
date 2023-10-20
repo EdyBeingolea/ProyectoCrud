@@ -20,20 +20,20 @@ CREATE TABLE Areas (
 
 CREATE TABLE Customer (
     id int  identity(1,1),
-    name varchar(60),
+    name varchar(60)NOT NULL CHECK (name LIKE '%[a-zA-Z ]'),
     address varchar(90),
     phone char(9),
-    status char(1) default 'A',
+    status char(1) default 'A'CHECK (status IN ('A', 'I')),
     CONSTRAINT Customer_pk PRIMARY KEY  (id)
 );
 
 CREATE TABLE Employee (
-    id int  identity(1,1),
-    name varchar(50),
-    lastName varchar(80),
-    dni char(8),
-    state char(1)default 'A',
-    CONSTRAINT Employee_pk PRIMARY KEY  (id)
+    id int identity(1,1),
+    name varchar(50) NOT NULL CHECK (name LIKE '%[a-zA-Z ]'),
+    lastName varchar(80) NOT NULL CHECK (name LIKE '%[a-zA-Z ]'),
+    dni char(8) NOT NULL,
+    status char(1) DEFAULT 'A' CHECK (status IN ('A', 'I')),
+    CONSTRAINT Employee_pk PRIMARY KEY (id)
 );
 
 CREATE TABLE Product (
